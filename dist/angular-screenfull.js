@@ -1,38 +1,4 @@
 /* global angular */
-/**
- * @ngdoc overview
- * @name  angularScreenfull
- * @id index
- * @description
- *  Lalala some text, some other text, moar text
- * @example
-   <example  module="myApp">
-     <file name="app.js">
-        angular.module('myApp', ['angularScreenfull']);
-     </file>
-     <file name="index.html">
-        <div ngsf-fullscreen>
-            <p>This is a fullscreen element</p>
-            <button ngsf-toggle-fullscreen>Toggle fullscreen</button>
-        </div>
-     </file>
-   </example>
- *
- * More more text, bla bla
- *@example
-  <example  module="myApp">
-     <file name="app.js">
-        angular.module('myApp', ['angularScreenfull']);
-     </file>
-     <file name="index.html">
-        <div ngsf-fullscreen="fullscreenCtrl">
-            <p>This is another fullscreen element</p>
-            <button ng-click="fullscreenCtrl.toggleFullscreen()">Toggle fullscreen</button>
-        </div>
-     </file>
-   </example>
-
- */
 (function() {
     angular.module('angularScreenfull', []);
 })();

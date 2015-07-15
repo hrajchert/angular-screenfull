@@ -5,8 +5,18 @@ var gulp      = require('gulp'),
     clean     = require('gulp-clean'),
     rename    = require('gulp-rename');
 
+var fs = require('fs');
+
+var env = {};
+
+try {
+    env = JSON.parse(fs.readFileSync('.env.json').toString());
+} catch(e) {
+
+}
+
 var target = {
-    docs: './docs'
+    docs: env.docs || './docs'
 };
 
 gulp.task('process-scripts', function() {
@@ -38,8 +48,8 @@ gulp.task('ngdocs', ['clean-ngdocs'], function () {
 });
 
 gulp.task('clean-ngdocs', function() {
-    return gulp.src(target.docs, {read:false})
+    return gulp.src(target.docs + '/*', {read:false})
         .pipe(clean({force: true}));
 });
 
-gulp.task('default', ['process-scripts', 'watch']);
+gulp.task('default', ['process-scripts', 'ngdocs', 'watch']);

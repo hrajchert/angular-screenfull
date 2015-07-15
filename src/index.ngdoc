@@ -55,13 +55,13 @@ In its simplest form, you can do something like this
 </example>
 
 
-# Export its functionality
-
 The `ngsf-fullscreen` indicates which element is going to be the fullscreen element and the `ngsf-toggle-fullscreen`
 will toggle the fullscren when clicked.
 
 Note that you can have multiple `ngsf-fullscreen` elements living side by side, the other directives require that a
 parent controller exists.
+
+# Export its functionality
 
 You can also expose the element controller trough its directive name. So for example you can achieve the same result
 using this
