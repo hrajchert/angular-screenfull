@@ -6,15 +6,6 @@ NG_DOCS={
     {
       "section": "api",
       "id": "index",
-      "shortName": "angularScreenfull",
-      "type": "overview",
-      "moduleName": "angularScreenfull",
-      "shortDescription": "Lalala some text, some other text, moar text",
-      "keywords": "angular angularscreenfull api app bla element fullscreen fullscreenctrl html js lalala moar module myapp ng-click ngsf-fullscreen ngsf-toggle-fullscreen overview text togglefullscreen"
-    },
-    {
-      "section": "api",
-      "id": "index",
       "shortName": "Api Description",
       "type": "overview",
       "moduleName": "Api Description",
