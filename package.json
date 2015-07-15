@@ -23,7 +23,9 @@
   "homepage": "https://github.com/hrajchert/angular-screenfull",
   "devDependencies": {
     "gulp": "^3.8.11",
+    "gulp-clean": "^0.3.1",
     "gulp-concat": "^2.5.2",
+    "gulp-ngdocs": "^0.2.13",
     "gulp-rename": "^1.2.0",
     "gulp-uglify": "^1.1.0"
   }

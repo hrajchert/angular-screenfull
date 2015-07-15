@@ -1,8 +1,13 @@
 var gulp      = require('gulp'),
     concat    = require('gulp-concat'),
     uglify    = require('gulp-uglify'),
+    gulpDocs  = require('gulp-ngdocs'),
+    clean     = require('gulp-clean'),
     rename    = require('gulp-rename');
 
+var target = {
+    docs: './docs'
+};
 
 gulp.task('process-scripts', function() {
     return gulp.src('./src/**/*.js')
@@ -14,11 +19,27 @@ gulp.task('process-scripts', function() {
 
 });
 
-
 gulp.task('watch', function() {
-    gulp.watch('./src/**/*.js', ['process-scripts']);
+    gulp.watch('./src/**/*.js', ['process-scripts', 'ngdocs']);
 
 });
 
+gulp.task('ngdocs', ['clean-ngdocs'], function () {
+    var options = {
+        html5Mode: false,
+        scripts: [
+            'dist/angular-screenfull.js',
+            'https://cdnjs.cloudflare.com/ajax/libs/screenfull.js/2.0.0/screenfull.js'
+        ]
+    };
+    return gulp.src(['./src/**/*.js', './src/**/*.ngdoc'])
+        .pipe(gulpDocs.process(options))
+        .pipe(gulp.dest(target.docs));
+});
 
-gulp.task('default', ['process-scripts','watch']);
+gulp.task('clean-ngdocs', function() {
+    return gulp.src(target.docs, {read:false})
+        .pipe(clean({force: true}));
+});
+
+gulp.task('default', ['process-scripts', 'watch']);

@@ -1,4 +1,4 @@
 /* global angular */
-(function(angular) {
-	angular.module('angularScreenfull', []);
-})(angular);
+(function() {
+    angular.module('angularScreenfull', []);
+})();
