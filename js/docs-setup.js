@@ -10,7 +10,7 @@ NG_DOCS={
       "type": "overview",
       "moduleName": "Api Description",
       "shortDescription": "Angular Screenfull",
-      "keywords": "achieve allows angular angular-animate angular-screenfull angularscreenfull api app based bower bower_components clicked controller dependency description directive directives dist download element elements enable enter example examples exists exit export expose files folder form fullscreen fullscreenctrl fullscren functionality generated going hide html html5 import indicates install js library living marked min module multiple myapp needed ng-click ngsf-fullscreen ngsf-toggle-fullscreen note overview parent provide reason require result screenfull show-if-fullscreen show-if-fullscreen-enabled side simplest src status toggle togglefullscreen trough wrapper"
+      "keywords": "$animation achieve add allow allows angular angular-animate angular-screenfull angularscreenfull animations api app appears based bower bower_components browser bug class clicked controller css dependency description detect directive directives dist doesn don download element elements enable enter example examples exists exit export expose f11 files find folder form fullscreen fullscreenctrl fullscren functionality generated going height hide hotkey html html5 imagine import indicates install js library living main marked min mode module multiple myapp needed ng-click ngsf-fullscreen ngsf-toggle-fullscreen note occupy overcome overview parent problem provide reason reasons require result screen screenfull script security service show-if-fullscreen show-if-fullscreen-enabled side simplest src stated status tap toggle togglefullscreen transition trough user vendors width word wrapper"
     },
     {
       "section": "api",
