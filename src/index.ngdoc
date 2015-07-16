@@ -52,6 +52,12 @@ In its simplest form, you can do something like this
         <button ngsf-toggle-fullscreen>Toggle fullscreen</button>
     </div>
  </file>
+ <file name="main.css">
+    .fullscreen {
+        width: 100%;
+        height: 100%;
+    }
+ </file>
 </example>
 
 
@@ -60,6 +66,19 @@ will toggle the fullscren when clicked.
 
 Note that you can have multiple `ngsf-fullscreen` elements living side by side, the other directives require that a
 parent controller exists.
+
+# A word in CSS
+
+When the element that uses directive `ngsf-fullscreen` becomes fullscreen a class is added using the `$animation` service, so you can add animations to the transition.
+
+Note that this library doesn't come with any CSS, so if you would like your element to occupy the whole screen (and I imagine that you want to), you should add something like this to your CSS.
+
+```css
+.fullscreen {
+    width: 100%;
+    height: 100%;
+}
+```
 
 # Export its functionality
 
@@ -98,3 +117,8 @@ We also provide directives to show the elements based on the fullscreen status, 
 </file>
 </example>
 
+# The problem with F11
+
+As stated in [this bug](https://github.com/hrajchert/angular-screenfull/issues/1), it appears that browser vendors don't allow a user script to tap into the `F11` hotkey for security reasons. That means that we can only detect that the page is in fullscreen mode when the `HTML5 fullscreen API` is used.
+
+If you can find a way to overcome this problem please let me know!
