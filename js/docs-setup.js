@@ -69,6 +69,10 @@ NG_DOCS={
     "navTemplate": false,
     "navContent": "",
     "navTemplateData": {},
+    "analytics": {
+      "account": "UA-44454147-3",
+      "domainName": "http://hrajchert.github.io/angular-screenfull/"
+    },
     "loadDefaults": {
       "angular": true,
       "angularAnimate": true,
