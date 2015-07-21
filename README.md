@@ -9,19 +9,25 @@ You can see the API documentation with some demo examples [here](http://hrajcher
 
 #### Download via bower or look for the files in the dist folder
 
-    $ bower install --save angular-screenfull
+```sh
+$ bower install --save angular-screenfull
+```
 
 #### Import it to your page
 
-    <script src="bower_components/screenfull/dist/screenfull.js"></script>
-    <script src="bower_components/angular-screenfull/dist/angular-screenfull.min.js"></script>
+```html
+<script src="bower_components/screenfull/dist/screenfull.js"></script>
+<script src="bower_components/angular-screenfull/dist/angular-screenfull.min.js"></script>
+```
 
 Note that [screenfull](https://github.com/sindresorhus/screenfull.js) is added as a bower dependency
 so if you use [main bower files](https://github.com/ck86/main-bower-files) the dependency will be added for you
 
 #### Enable it on your app
 
-    angular.module('myModule', ['angularScreenfull']);
+```js
+angular.module('myModule', ['angularScreenfull']);
+```
 
 ## Use it
 
@@ -40,7 +46,7 @@ will toggle the fullscren when clicked.
 Note that you can have multiple `ngsf-fullscreen` elements living side by side, the other directives require that a
 parent controller exists.
 
-# A word in CSS
+## A word in CSS
 
 When the element that uses directive `ngsf-fullscreen` becomes fullscreen a class is added using the `$animation` service, so you can add animations to the transition.
 
@@ -53,7 +59,7 @@ Note that this library doesn't come with any CSS, so if you would like your elem
 }
 ```
 
-# Export its functionality
+## Export its functionality
 
 You can also expose the element controller trough its directive name. So for example you can achieve the same result
 using this
@@ -78,7 +84,7 @@ We also provide directives to show the elements based on the fullscreen status, 
 ```
 
 
-# The problem with F11
+## The problem with F11
 
 As stated in [this bug](https://github.com/hrajchert/angular-screenfull/issues/1), it appears that browser vendors don't allow a user script to tap into the `F11` hotkey for security reasons. That means that we can only detect that the page is in fullscreen mode when the `HTML5 fullscreen API` is used.
 

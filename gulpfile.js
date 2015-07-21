@@ -37,6 +37,10 @@ gulp.task('watch', function() {
 gulp.task('ngdocs', ['clean-ngdocs'], function () {
     var options = {
         html5Mode: false,
+        analytics: {
+            account: 'UA-44454147-3',
+            domainName: 'http://hrajchert.github.io/angular-screenfull/'
+        },
         scripts: [
             'dist/angular-screenfull.js',
             'https://cdnjs.cloudflare.com/ajax/libs/screenfull.js/2.0.0/screenfull.js'
