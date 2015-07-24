@@ -70,6 +70,8 @@ using this
 </div>
 ```
 
+## Show or hide
+
 We also provide directives to show the elements based on the fullscreen status, so for example you can have this
 
 ```html
