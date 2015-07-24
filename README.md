@@ -1,9 +1,9 @@
 Angular Screenfull
 ==================
 
-Angular screenfull is a wrapper around the [Screenfull library](https://github.com/sindresorhus/screenfull.js/), it allows you to use the HTML5 fullscreen API in an Angular way.
+Angular screenfull is a wrapper around the [Screenfull library](https://github.com/sindresorhus/screenfull.js/), that allows you to use the `HTML5 fullscreen API`, in "the Angular way".
 
-You can see the API documentation with some demo examples [here](http://hrajchert.github.io/angular-screenfull/#/api).
+You can see the [API documentation](http://hrajchert.github.io/angular-screenfull/#/api) with some [demo examples](http://hrajchert.github.io/angular-screenfull/#/api).
 
 ## Install
 
@@ -21,7 +21,7 @@ $ bower install --save angular-screenfull
 ```
 
 Note that [screenfull](https://github.com/sindresorhus/screenfull.js) is added as a bower dependency
-so if you use [main bower files](https://github.com/ck86/main-bower-files) the dependency will be added for you
+so if you use [main bower files](https://github.com/ck86/main-bower-files) the dependency will be added for you.
 
 #### Enable it on your app
 
@@ -43,8 +43,7 @@ In its simplest form, you can do something like this
 The `ngsf-fullscreen` indicates which element is going to be the fullscreen element and the `ngsf-toggle-fullscreen`
 will toggle the fullscren when clicked.
 
-Note that you can have multiple `ngsf-fullscreen` elements living side by side, the other directives require that a
-parent controller exists.
+Note that you can have multiple `ngsf-fullscreen` elements living side by side, the other directives will use the closest parent controller.
 
 ## A word in CSS
 
