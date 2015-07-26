@@ -4,9 +4,9 @@
 
 # Angular Screenfull
 
+Angular screenfull is a wrapper around the [Screenfull library](https://github.com/sindresorhus/screenfull.js/), that allows you to use the [HTML5 fullscreen API](https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Using_full_screen_mode), in "the Angular way".
 
-
-Angular screenfull is a wrapper around the [Screenfull library](https://github.com/sindresorhus/screenfull.js/), it allows you to use the HTML5 fullscreen API in an Angular way.
+You can [fork it on github](https://github.com/hrajchert/angular-screenfull).
 
 ## Note on examples
 
@@ -16,13 +16,13 @@ angular-animate and marked are not needed, but for some reason are added in the 
 
 #### Download via bower or look for the files in the dist folder
 
-```
+```sh
 $ bower install --save angular-screenfull
 ```
 
 #### Import it to your page
 
-```
+```html
 <script src="bower_components/screenfull/dist/screenfull.js"></script>
 <script src="bower_components/angular-screenfull/dist/angular-screenfull.min.js"></script>
 ```
@@ -32,7 +32,7 @@ so if you use [main bower files](https://github.com/ck86/main-bower-files) the d
 
 #### Enable it on your app
 
-```
+```js
 angular.module('myApp', ['angularScreenfull']);
 ```
 
@@ -97,7 +97,7 @@ using this
  </file>
 </example>
 
-# Show or hide elements
+# Show or hide
 
 We also provide directives to show the elements based on the fullscreen status, so for example you can have this
 
