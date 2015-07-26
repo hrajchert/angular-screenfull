@@ -9,11 +9,10 @@ var fs = require('fs');
 
 var env = {};
 
+// See if there is an enviromental file with options to override
 try {
     env = JSON.parse(fs.readFileSync('.env.json').toString());
-} catch(e) {
-
-}
+} catch (e) {}
 
 var target = {
     docs: env.docs || './docs'

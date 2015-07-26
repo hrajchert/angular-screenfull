@@ -45,17 +45,13 @@
                 var p = $parse(attrs.ngsfFullscreen);
                 p.assign(scope, ctrl);
             }
-
-            // Make this the current fullscreen element
-            ctrl.setFullScreenElement(elm[0]);
         }
     }
 
-    NgsfFullscreenController.$inject = ['$scope', '$document'];
-    function NgsfFullscreenController ($scope, $document) {
+    NgsfFullscreenController.$inject = ['$scope', '$document', '$element', '$animate'];
+    function NgsfFullscreenController ($scope, $document, $elm, $animate) {
         var ctrl = this;
 
-        ctrl.setFullScreenElement = setFullScreenElement;
         ctrl.onFullscreenChange = onFullscreenChange;
         ctrl.requestFullscreen = requestFullscreen;
         ctrl.removeFullscreen = removeFullscreen;
@@ -65,11 +61,8 @@
 
         function subscribeToEvents () {
             var fullscreenchange = function () {
-                if (ctrl.isFullscreen()) {
-                    angular.element(_elm).addClass('fullscreen');
-                } else {
-                    angular.element(_elm).removeClass('fullscreen');
-                }
+                $animate[ctrl.isFullscreen() ? 'addClass' : 'removeClass']($elm, 'fullscreen');
+                // TODO: document using ngdoc
                 $scope.$emit('fullscreenchange');
                 $scope.$apply();
             };
@@ -85,19 +78,13 @@
 
         ////////////////////////////////////////
 
-        var _elm;
-
-        function setFullScreenElement (elm) {
-            _elm = elm;
-        }
-
         function onFullscreenChange (handler) {
             return $scope.$on('fullscreenchange', handler);
         }
 
         function requestFullscreen () {
             if (ctrl.fullscreenEnabled()) {
-                screenfull.request(_elm);
+                screenfull.request($elm[0]);
                 $scope.$emit('fullscreenEnabled');
                 return true;
             }
@@ -115,7 +102,7 @@
         function toggleFullscreen () {
             if (ctrl.fullscreenEnabled()) {
                 var isFullscreen = screenfull.isFullscreen;
-                screenfull.toggle(_elm);
+                screenfull.toggle($elm[0]);
                 if (isFullscreen) {
                     $scope.$emit('fullscreenDisabled');
                 } else {
