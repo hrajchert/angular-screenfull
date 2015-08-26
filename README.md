@@ -1,5 +1,5 @@
-Angular Screenfull
-==================
+HTML5 Fullscreen API in Angular.js
+===================================
 
 Angular screenfull is a wrapper around the [Screenfull library](https://github.com/sindresorhus/screenfull.js/), that allows you to use the [HTML5 fullscreen API](https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Using_full_screen_mode), in "the Angular way".
 
