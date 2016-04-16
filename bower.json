@@ -21,6 +21,6 @@
     "tests"
   ],
   "dependencies": {
-    "screenfull": "~2.0.0"
+    "screenfull": "~3.0.0"
   }
 }
