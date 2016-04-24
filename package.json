@@ -1,6 +1,6 @@
 {
   "name": "angular-screenfull",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Angular bindings to the Screenfull library to allow fullscreen in your app.",
   "main": "dist/angular-screenfull.js",
   "scripts": {

@@ -55,4 +55,6 @@ gulp.task('clean-ngdocs', function() {
         .pipe(clean({force: true}));
 });
 
+gulp.task('release', ['process-scripts', 'ngdocs']);
+
 gulp.task('default', ['process-scripts', 'ngdocs', 'watch']);
