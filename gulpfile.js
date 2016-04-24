@@ -42,7 +42,7 @@ gulp.task('ngdocs', ['clean-ngdocs'], function () {
         },
         scripts: [
             'dist/angular-screenfull.js',
-            'https://cdnjs.cloudflare.com/ajax/libs/screenfull.js/2.0.0/screenfull.js'
+            'https://cdnjs.cloudflare.com/ajax/libs/screenfull.js/3.0.0/screenfull.js'
         ]
     };
     return gulp.src(['./src/**/*.js', './src/**/*.ngdoc'])

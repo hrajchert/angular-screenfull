@@ -53,6 +53,7 @@
         var ctrl = this;
 
         ctrl.onFullscreenChange = onFullscreenChange;
+        ctrl.onFullscreenChangeComplete = onFullscreenChangeComplete;
         ctrl.requestFullscreen = requestFullscreen;
         ctrl.removeFullscreen = removeFullscreen;
         ctrl.toggleFullscreen = toggleFullscreen;
@@ -61,7 +62,9 @@
 
         function subscribeToEvents () {
             var fullscreenchange = function () {
-                $animate[ctrl.isFullscreen() ? 'addClass' : 'removeClass']($elm, 'fullscreen');
+                $animate[ctrl.isFullscreen() ? 'addClass' : 'removeClass']($elm, 'fullscreen').then(function(){
+                  $scope.$emit('fullscreenchangecomplete');
+                });
                 // TODO: document using ngdoc
                 $scope.$emit('fullscreenchange');
                 $scope.$apply();
@@ -80,6 +83,10 @@
 
         function onFullscreenChange (handler) {
             return $scope.$on('fullscreenchange', handler);
+        }
+
+        function onFullscreenChangeComplete (handler) {
+            return $scope.$on('fullscreenchangecomplete', handler);
         }
 
         function requestFullscreen () {
