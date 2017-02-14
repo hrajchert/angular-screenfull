@@ -35,15 +35,10 @@
         function link (scope, elm, attrs, fullScreenCtrl) {
             var hideOrShow = function () {
 
-                var show = fullScreenCtrl.isFullscreen();
                 if (attrs.showIfFullscreen === 'false' || attrs.showIfFullscreen === false) {
-                    show = !show;
-                }
-
-                if (show) {
-                    $animate.removeClass(elm, 'ng-hide');
-                } else {
                     $animate.addClass(elm, 'ng-hide');
+                } else {
+                    $animate.removeClass(elm, 'ng-hide');
                 }
             };
             hideOrShow();
