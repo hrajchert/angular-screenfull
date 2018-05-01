@@ -7,21 +7,20 @@ You can see the [API documentation](http://hrajchert.github.io/angular-screenful
 
 ## Install
 
-#### Download via bower or look for the files in the dist folder
+#### Download via npm or look for the files in the dist folder
 
 ```sh
-$ bower install --save angular-screenfull
+$ npm install --save angular-screenfull
 ```
 
 #### Import it to your page
 
 ```html
-<script src="bower_components/screenfull/dist/screenfull.js"></script>
-<script src="bower_components/angular-screenfull/dist/angular-screenfull.min.js"></script>
+<script src="node_modules/screenfull/dist/screenfull.js"></script>
+<script src="node_modules/angular-screenfull/dist/angular-screenfull.min.js"></script>
 ```
 
-Note that [screenfull](https://github.com/sindresorhus/screenfull.js) is added as a bower dependency
-so if you use [main bower files](https://github.com/ck86/main-bower-files) the dependency will be added for you.
+You need to have both [screenfull](https://github.com/sindresorhus/screenfull.js) and angular-screenfull loaded in the browser in order to the directive to work. I have a an agular.js project using a custom loader, but if you want to add webpack support, PR's are welcomed.
 
 #### Enable it on your app
 
