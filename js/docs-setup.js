@@ -10,7 +10,7 @@ NG_DOCS={
       "type": "overview",
       "moduleName": "Api Description",
       "shortDescription": "Angular Screenfull",
-      "keywords": "$animation achieve add allow allows angular angular-animate angular-screenfull angularscreenfull animations api app appears based bower bower_components browser bug class clicked controller css dependency description detect directive directives dist doesn don download element elements enable enter example examples exists exit export expose f11 files find folder form fullscreen fullscreenctrl fullscren functionality generated github going height hide hotkey html html5 imagine import indicates install js library living main marked min mode module mozilla multiple myapp needed ng-click ngsf-fullscreen ngsf-toggle-fullscreen note occupy org overcome overview parent problem provide reason reasons require result screen screenfull script security service sh show-if-fullscreen show-if-fullscreen-enabled side simplest src stated status tap toggle togglefullscreen transition trough user vendors width word wrapper"
+      "keywords": "$animation achieve add agular allow allows angular angular-animate angular-screenfull angularscreenfull animations api app appears based browser bug class clicked controller css custom description detect directive directives dist doesn don download element elements enable enter example examples exists exit export expose f11 files find folder form fullscreen fullscreenctrl fullscren functionality generated github going height hide hotkey html html5 imagine import indicates install js library living loaded loader main marked min mode module mozilla multiple myapp needed ng-click ngsf-fullscreen ngsf-toggle-fullscreen node_modules note npm occupy order org overcome overview parent pr problem project provide reason reasons require result screen screenfull script security service sh show-if-fullscreen show-if-fullscreen-enabled side simplest src stated status support tap toggle togglefullscreen transition trough user vendors webpack welcomed width word work wrapper"
     },
     {
       "section": "api",
@@ -60,7 +60,7 @@ NG_DOCS={
       "js/angular-animate.min.js",
       "js/marked.js",
       "js/dist/angular-screenfull.js",
-      "https://cdnjs.cloudflare.com/ajax/libs/screenfull.js/2.0.0/screenfull.js"
+      "https://cdnjs.cloudflare.com/ajax/libs/screenfull.js/3.0.0/screenfull.js"
     ],
     "styles": [],
     "title": "API Documentation",
@@ -87,6 +87,6 @@ NG_DOCS={
     "js/angular-animate.min.js",
     "js/marked.js",
     "js/dist/angular-screenfull.js",
-    "https://cdnjs.cloudflare.com/ajax/libs/screenfull.js/2.0.0/screenfull.js"
+    "https://cdnjs.cloudflare.com/ajax/libs/screenfull.js/3.0.0/screenfull.js"
   ]
 };
