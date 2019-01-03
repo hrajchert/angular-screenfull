@@ -30,6 +30,6 @@
     "gulp-uglify": "^1.1.0"
   },
   "dependencies": {
-    "screenfull": "3.3.2"
+    "screenfull": "3.3.3"
   }
 }
