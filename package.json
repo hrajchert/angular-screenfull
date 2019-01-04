@@ -1,6 +1,6 @@
 {
   "name": "angular-screenfull",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "Angular bindings to the Screenfull library to allow fullscreen in your app.",
   "main": "dist/angular-screenfull.js",
   "scripts": {
@@ -31,6 +31,6 @@
     "gulp-uglify": "^3.0.1"
   },
   "dependencies": {
-    "screenfull": "3.3.2"
+    "screenfull": "4.0.0"
   }
 }

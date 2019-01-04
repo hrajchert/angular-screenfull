@@ -44,7 +44,7 @@ const ngdocs = gulp.series(cleanNgdocs, function ngdocs () {
         },
         scripts: [
             'dist/angular-screenfull.js',
-            'https://cdnjs.cloudflare.com/ajax/libs/screenfull.js/3.0.0/screenfull.js'
+            'https://cdnjs.cloudflare.com/ajax/libs/screenfull.js/4.0.0/screenfull.js'
         ]
     };
     return gulp.src(['./src/**/*.js', './src/**/*.ngdoc'])
