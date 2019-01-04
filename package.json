@@ -4,6 +4,7 @@
   "description": "Angular bindings to the Screenfull library to allow fullscreen in your app.",
   "main": "dist/angular-screenfull.js",
   "scripts": {
+    "build": "gulp release",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,12 +23,12 @@
   },
   "homepage": "https://github.com/hrajchert/angular-screenfull",
   "devDependencies": {
-    "gulp": "^3.8.11",
-    "gulp-clean": "^0.3.1",
-    "gulp-concat": "^2.5.2",
-    "gulp-ngdocs": "^0.2.13",
-    "gulp-rename": "^1.2.0",
-    "gulp-uglify": "^1.1.0"
+    "gulp": "^4.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-ngdocs": "^0.3.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-uglify": "^3.0.1"
   },
   "dependencies": {
     "screenfull": "3.3.2"

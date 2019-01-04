@@ -1,9 +1,11 @@
-var gulp      = require('gulp'),
-    concat    = require('gulp-concat'),
-    uglify    = require('gulp-uglify'),
-    gulpDocs  = require('gulp-ngdocs'),
-    clean     = require('gulp-clean'),
-    rename    = require('gulp-rename');
+const gulp      = require('gulp');
+const concat    = require('gulp-concat');
+const uglify    = require('gulp-uglify');
+const gulpDocs  = require('gulp-ngdocs');
+const clean     = require('gulp-clean');
+const rename    = require('gulp-rename');
+const through = require('through2');
+const File = require('vinyl');
 
 var fs = require('fs');
 
@@ -18,22 +20,22 @@ var target = {
     docs: env.docs || './docs'
 };
 
-gulp.task('process-scripts', function() {
+function processScripts () {
     return gulp.src('./src/**/*.js')
         .pipe(concat('angular-screenfull.js'))
         .pipe(gulp.dest('./dist/'))
         .pipe(uglify())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('./dist/'));
+};
 
-});
+const watch = function() {
+    gulp.watch('./src/**/*.js', gulp.series(processScripts, ngdocs));
+};
 
-gulp.task('watch', function() {
-    gulp.watch('./src/**/*.js', ['process-scripts', 'ngdocs']);
+exports.watch = watch;
 
-});
-
-gulp.task('ngdocs', ['clean-ngdocs'], function () {
+const ngdocs = gulp.series(cleanNgdocs, function ngdocs () {
     var options = {
         html5Mode: false,
         analytics: {
@@ -47,14 +49,28 @@ gulp.task('ngdocs', ['clean-ngdocs'], function () {
     };
     return gulp.src(['./src/**/*.js', './src/**/*.ngdoc'])
         .pipe(gulpDocs.process(options))
+        .pipe(upgradeVynil())
         .pipe(gulp.dest(target.docs));
 });
 
-gulp.task('clean-ngdocs', function() {
+/**
+ * gulp-watch/vinyl-source-stream uses an outdated vinyl, which doesn't have some functions which vinyl-fs expects.
+ * Can be removed when gulp-watch updates it to vinyl 2.x.
+ * @returns {NodeJS.ReadWriteStream}
+ */
+function upgradeVynil() {
+    return through.obj(function(file, encoding, cb) {
+      const upgradedFile = new File(file);
+      cb(null, upgradedFile);
+    });
+  }
+
+exports.ngdocs = ngdocs;
+function cleanNgdocs() {
     return gulp.src(target.docs + '/*', {read:false})
         .pipe(clean({force: true}));
-});
+}
 
-gulp.task('release', ['process-scripts', 'ngdocs']);
+exports.release = gulp.series(processScripts, ngdocs);
+exports.default = gulp.series(processScripts, ngdocs, watch);
 
-gulp.task('default', ['process-scripts', 'ngdocs', 'watch']);
