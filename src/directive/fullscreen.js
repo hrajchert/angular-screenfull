@@ -129,7 +129,7 @@
 
         function fullscreenEnabled () {
             if (typeof screenfull !== 'undefined') {
-                return screenfull.enabled;
+                return screenfull.isEnabled;
             }
             return false;
         }
